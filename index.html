@@ -4,8 +4,13 @@
 <head>
     <title>My website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+    
 </head>
 <body>
+    <div id="home">
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -13,11 +18,77 @@
             <li><a href="#projects">Projects</a></li>
         </ul>
     </nav>
+    
     <div class="landing">
     <p id="paragraph1">Hello,I'm Intwaza Belyse</p>
-    <p id="paragraph2">Software Engineer</p>
-</div>
-<button id="btnresume" onclick="resume()">Resume</button>
+    <p id="paragraph2">Software Developer</p>
 
+</div>
+</div>
+<nav>
+    <ul>
+        <li><a class="nav" href="#home">Home</a></li>
+        <li><a class="nav" href="#about">About</a></li>
+        <li><a class="nav" href="#projects">Projects</a></li>
+    </ul>
+</nav>
+    <div id="about">
+        <h1>ABOUT ME</h1>
+        <div class="row">
+            <div class="column">
+                <img src="images/lap.jpg" style="width: 100%;">
+            </div>
+            <div class="column">
+                <p id="paragraph3">Belyse is a software enginner. She is flued by her passion of solving world
+                problems using technology. She consider herself as “Life longer student”,
+                she is always willing to develop her teck skills.She has skills in Python, 
+                Kotlin, JavaScript and UI/UX design.<br> She has soft skills like communication 
+                skills, Team work, self_confident.Her hunger of solving world problems had
+                 encouraged her to create a quite number of projects. 
+                 <br><br> Belyse strongly believe in hard_work, confident and Team Work which has 
+                 contributed to her success. She is interested in Travelling, reading books 
+                 and listening to music.</p>
+                <a class="resume" href="resume">RESUME</a>
+        </div>
+    </div>
+</div>
+<div id="projects">
+    <h1>PROJECTS</h1>
+    <div class="cards">
+            <div class="card">
+                <img id="cardImage" src="images/fruits.jpg" style="width: 100%;">
+                <div class="descriptions">
+                    <h2>MAMA MBOGA SITE</h2>
+                    <p>An E-commerce website that you can be able to order vegetables and fruits</p>
+                    <a class="explore" href="https://upbeat-ritchie-d29b86.netlify.app/">Explore</a>
+                </div>
+        </div>
+            <div class="card">
+                <img src="images/form_page.jpg" style="width: 100%;">
+                <div class="descriptions">
+                   <h2>FORM PAGE</h2>
+                   <p>A form page that you can be able to login and sign up</p>
+                   <a class="explore" href="https://serene-almeida-60a2ab.netlify.app/">Explore</a>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="images/youTube projet.jpg" style="width: 100%;">
+                    <div class="descriptions">
+                        <h2>YOUTUBE APP</h2>
+                        <p>Youtube app that you can be to watch different videos</p>
+                        <a class="explore">Explore</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+    <div id="contact">
+          <p id="ques">Any Questions.</p>
+          <p  id="get">Get In Touch.<br>
+          </p>
+          <a href="https://twitter.com/IntwazaB"><img src="images/twitter.png" alt="twitter" height="3.5%" width="3.5%"></a> 
+          <a href="https://www.linkedin.com/in/intwaza-belyse/"><img src="images/linkedin.png" alt="linkedin" height="3.5%" width="3.5%"></a> 
+          <a href="https://github.com/intwaza"><img src="images/github.png" alt="github" height="4.2%" width="4.2%"></a> 
+      </div>
+      
 </body>
 </html>

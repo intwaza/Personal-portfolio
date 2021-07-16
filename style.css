@@ -1,11 +1,15 @@
 *{
   margin: 0%;
 }
+body{
+  color: white;
+  background-color: black;
+}
 ul{
  display: inline;
  position: fixed;
- background-color: #EEE2DC;
  background-position: 0%;
+ background-color: black;
  position: fixed;
  top: 0;
  width: 100%;
@@ -23,32 +27,123 @@ ul li{
   }
 
 a{
-    color: black;
+    color: white;
     padding-left: 30px;
     text-decoration: none;
     font-size: 20px;
   }
-a:hover{
-    color:#AC3B61;
+.nav:hover{
+    color:#E3BA28;
   }
+#home{
+  margin-top: 5%;
+  margin-bottom: 21%;
+
+}
+#about{
+  margin-top: 15%;
+  margin-bottom: 5%;
+  background-color: rgb(19, 18, 18);
+}
 .landing{
-  padding-top: 15%;
+  
+  padding-top: 10%;
   text-align: center;
+ 
+  
 }
 #paragraph2{
-  font-size: 36px;
+  font-size: 60px;
   /* margin: 0; */
-  color: #AC3B61;
+  color: #E3BA28;
 }
 
 #paragraph1{
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 5%;
 }
-#btnresume{
-  background-color:rgba(134, 130, 130, 1);
+.column {
+  float: left;
+  width: 45.3%;
+  padding: 10px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#paragraph3{
+  width: 100%;
+  margin-left: 10%;
+  margin-top: 20%;
+}
+#paragraph4{
+  padding-left: 20%;
+
+
+}
+.cards{
+  display: flex;
+}
+.card {
+  box-shadow: 0 4px 5px ;
+  transition: 0.3s;
+  width: 1000%;
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color:black;
+  padding: 20px;
+  background-color: rgb(41, 40, 40);
+
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 #E3BA28;
+}
+
+.descriptions {
+  padding: 2px 16px;
+  text-align: center;
+}
+h2{
+  color: #E3BA28;
+}
+.explore{
+  border: solid #E3BA28; 
+  background-color: #E3BA28;
+  margin-top: 20%;
+  text-align: center;
+}
+.resume{
+  border: solid ;
+  /* background-color:#E3BA28; */
   color: white;
   margin-left: 47%;
   text-align: center;
-  border-radius: 30px;
+  margin-top: 20px;
+  width: 10%;
+  height: 10%;
+}
+#cardImage{
+  width: 30%;
+}
+#projects{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: rgb(19, 18, 18);
+}
+h1{
+  color: #E3BA28;
+  text-align: center;
+}
+#contact{
+  text-align: center;
+}
+#ques{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 200%;
+}
+#get{
+  font-family: 'Courier New', Courier, monospace;
 }
