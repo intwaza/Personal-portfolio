@@ -40,7 +40,7 @@ a{
 #home{
   margin-top: 5%;
   margin-bottom: 21%;
-  background-image: url(images/back.jpeg);
+  background-color: black;
 
 }
 #about{
@@ -79,6 +79,7 @@ a{
   width: 100%;
   margin-left: 12%;
   margin-top: 15%;
+  font-size: 100%;
 }
 #paragraph4{
   padding-left: 20%;
@@ -170,4 +171,7 @@ h1{
 #myimage{
   padding-left: 10%;
   padding-top: 5%;
+}
+#copy{
+  font-size: 120%;
 }
