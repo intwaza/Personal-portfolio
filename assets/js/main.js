@@ -48,23 +48,6 @@ skillsHeader.forEach((el)=>{
     el.addEventListener('click', toggleSkills)
 })
 
-/*==================== ACHIEVEMENTS TABS ====================*/
-
-
-/*==================== SERVICES MODAL ====================*/
-
-
-/*==================== PORTFOLIO SWIPER  ====================*/
-
-
-/*==================== TESTIMONIAL ====================*/
-
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-
-
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
-
 
 /*==================== SHOW SCROLL UP ====================*/ 
 
