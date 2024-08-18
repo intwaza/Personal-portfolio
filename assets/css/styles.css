@@ -86,9 +86,13 @@
 html {
   scroll-behavior: smooth;
 }
+.hidden {
+  display: none;
+}
+
 
 body {
-  margin: 0 0 var(--header-height) 0;
+  margin: 0 0 var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -149,7 +153,7 @@ img {
 .header {
   width: 100%;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
@@ -185,15 +189,35 @@ img {
     .nav__menu{
         position: fixed;
         bottom: -100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--body-color);
+        right: 0;
+        width: 380px;
+        height: 100%;
+        background-color: var(--first-color-alt);
         padding: 2rem 1.5rem 4rem;
         box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
-        border-radius: 1.5rem 1.5rem;
-        transition: .3s;
+        transition: .5s;
+        z-index: 1032;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
+}
+.inner-wrapper {
+    padding: 3.5rem 5rem;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: left;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 .nav__list{
     grid-template-columns: repeat(3,1fr);
@@ -204,7 +228,7 @@ img {
     flex-direction: column;
     align-items: center;
     font-size: var(--small-font-size);
-    color: var(--title-color);
+    color: var(--body-color);
     font-weight: var(--font-medium);
 }
 .nav__link:hover{
@@ -217,10 +241,10 @@ img {
 .nav__close{
     position: absolute;
     right: 1.3rem;
-    bottom: .5rem;
+    top: .5rem;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--first-color);
+    color: var(--body-color);
 }
 
 .nav__close:hover{
@@ -247,9 +271,19 @@ img {
   align-items: center;
 }
 .home__social{
-  display: grid;
+  display: flex;
   grid-template-columns: max-content;
   row-gap: 1rem;
+  gap: 1.5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; 
+  
+}
+.home__img{
+  align-items: center;
+  justify-content: center; 
+  margin-left: 5rem;
 }
 .home__social-icon{
   font-size: 1.25rem;
@@ -270,15 +304,19 @@ img {
 }
 .home__title{
   font-size: var(--big-font-size);
+  text-align: center;
+  margin-bottom: var(--mb-1);
 }
 .home__subtitle{
   font-size: var(--h3-font-size);
   color: var(--text-color);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-75);
+  text-align: center;
 }
 .home__description{
   margin-bottom: var(--mb-2);
+  text-align: center;
 }
 .home__scroll{
   display: none;
@@ -455,19 +493,30 @@ img {
   width: 265px;
   border-radius: .5rem;
   justify-self: center;
+  margin-top: var(--mb-0-5);
 }
 .portfolio__title{
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-5);
+  text-align: center;
 }
 .portfolio__description{
   margin-bottom: var(--mb-0-75);
+  text-align: center;
 }
 
 .portfolio__button:hover .button__icon{
   transform: translateX(.25rem);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--mb-0-75);
 }
-
+.portfolio__data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 /*==================== CONTACT ME ====================*/
 .contact__container{
   row-gap: 3rem;

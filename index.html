@@ -12,6 +12,7 @@
         
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="assets/css/styles.css">
+        <link href="images/favicon.png" rel="icon">
 
         <title>Intwaza's Portfolio</title>
     </head>
@@ -22,6 +23,7 @@
                 <a href="#" class="nav__logo">Intwaza</a>
 
                 <div class="nav__menu" id="nav-menu">
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
                     <ul class="nav__list grid">
                         <li class="nav__item">
                             <a href="#home" class="nav__link">
@@ -44,7 +46,7 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#project" class="nav__link">
+                            <a href="#projects" class="nav__link">
                                 <i class="uil uil-scenery nav__icon"></i> Projects
                             </a>
                         </li>
@@ -54,7 +56,7 @@
                             </a>
                         </li>
                     </ul>
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                    
                 </div>
 
                 <div class="nav__btns">
@@ -72,17 +74,6 @@
             <section class="home section" id="home">
                 <div class="home__container container grid">
                     <div class="home__content grid">
-                        <div class="home__social">
-                            <a href="https://github.com/intwaza" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github-alt"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/intwaza-belyse/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-                            <a href="https://twitter.com/IntwazaB" target="_blank" class="home__social-icon">
-                                <i class="uil uil-twitter-alt"></i>
-                            </a>
-                        </div>
                         <div class="home__img">
                             <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <mask id="mask0" mask-type="alpha">
@@ -102,13 +93,21 @@
                             </svg>
                         </div>
                         <div class="home__data">
-                            <h1 class="home__title">Hello, I am Belyse Intwaza</h1>
-                            <h3 class="home__subtitle">Software Developer</h3>
+                            <h1 class="home__title">Belyse Intwaza</h1>
+                            <!-- <h3 class="home__subtitle">Software Developer</h3> -->
                             <p class="home__description">Have an experience in web design and development 
                                 knowledge, producing quality work</p>
-                            <a href="#contact" class="button button--flex">
-                                Contact Me <i class="uil uil-message button__icon"></i>
-                            </a>
+                                <div class="home__social">
+                                    <a href="https://github.com/intwaza" target="_blank" class="home__social-icon">
+                                        <i class="uil uil-github-alt"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/intwaza-belyse/" target="_blank" class="home__social-icon">
+                                        <i class="uil uil-linkedin-alt"></i>
+                                    </a>
+                                    <a href="https://twitter.com/IntwazaB" target="_blank" class="home__social-icon">
+                                        <i class="uil uil-twitter-alt"></i>
+                                    </a>
+                                </div>
                         </div>
                     </div>
                     <div class="home__scroll">
