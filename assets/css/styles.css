@@ -8,7 +8,7 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 230; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -71,9 +71,31 @@
 }
 
 /*========== Variables Dark theme ==========*/
-
+body.dark-theme{
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: hsl(var(--hue-color), 29%, 16%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
 
 /*========== Button Dark/Light ==========*/
+.nav__btns{
+  display: flex;
+  align-items: center;
+}
+.change-theme{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-0-75);
+  cursor: pointer;
+}
+.change-theme:hover{
+  color: var(--first-color);
+}
 
 
 /*==================== BASE ====================*/
@@ -153,7 +175,7 @@ img {
 .header {
   width: 100%;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
@@ -188,14 +210,14 @@ img {
 @media screen and (max-width: 767px) {
     .nav__menu{
         position: fixed;
-        bottom: -100%;
-        right: 0;
-        width: 380px;
-        height: 100%;
-        background-color: var(--first-color-alt);
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
         padding: 2rem 1.5rem 4rem;
         box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
-        transition: .5s;
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
         z-index: 1032;
         display: flex;
         flex-direction: column;
@@ -228,8 +250,8 @@ img {
     flex-direction: column;
     align-items: center;
     font-size: var(--small-font-size);
-    color: var(--body-color);
     font-weight: var(--font-medium);
+    color: var(--title-color);
 }
 .nav__link:hover{
     color: var(--first-color);
@@ -244,7 +266,7 @@ img {
     top: .5rem;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--body-color);
+    color: var(--title-color);
 }
 
 .nav__close:hover{
@@ -256,10 +278,14 @@ img {
 }
 
 /* Active link */
-
+.active-link{
+  color: var(--first-color);
+}
 
 /* Change background header */
-
+.scroll-header{
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
 
 /*==================== HOME ====================*/
 .home__container{
@@ -565,23 +591,135 @@ img {
 .footer__links:hover{
   color: var(--first-color-lighter);
 }
-/* .footer__social{
+.footer__social{
   font-size: 1.25rem;
-} */
+  margin-right: var(--mb-1-5);
+}
+.footer__social:hover{
+  color: var(--first-color-lighter);
+}
+.footer__copy{
+  font-size: var(--small-font-size);
+  text-align: center;
+  color: var(--text-color-light);
+  margin-top: 3rem;
+}
+.footer__title,
+.footer__subtitle,
+.footer__social,
+.footer__link,
+.footer__copy{
+  color: #fff;
+}
 /*========== SCROLL UP ==========*/
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--first-color);
+  opacity: .8;
+  padding: 0 .3rem;
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+}
+.scrollup:hover{
+  background-color: var(--first-color-alt);
+}
+.scrollup__icon{
+  font-size: 1.5rem;
+  color: #fff;
+}
 
 
 /* Show scroll */
-
+.show-scroll{
+  bottom: 5rem;
+}
 
 /*========== SCROLL BAR ==========*/
-
-
+::-webkit-scrollbar{
+  width: .60rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: .5rem;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--scroll-thumb-color);
+  border-radius: .5rem;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: var(--text-color-light);
+}
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-
+@media screen and (max-width: 350px) {
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+  .nav__menu{
+    padding: 2rem 0.25rem 4rem;
+  }
+  .nav__list{
+    column-gap: 0;
+  } 
+  .home__content{
+    grid-template-columns: .25fr 3fr;
+  }
+  .home__img{
+    width: 200px;
+  }
+  .home__blob{
+    width: 180px;
+  }
+  .home__data{
+    grid-column: 1/3;
+  }
+  .skills__title{
+    font-size: var(--h2-font-size);
+  }
+  .skills__name{
+    font-size: var(--normal-font-size);
+  }
+  .portfolio__img{
+    width: 220px;
+  }
+  .portfolio__title{
+    font-size: var(--h3-font-size);
+  }
+  .portfolio__description{
+    font-size: var(--small-font-size);
+  }
+  .portfolio__button{
+    font-size: var(--small-font-size);
+  }
+  
+  
+}
 
 /* For medium devices */
-
+@media screen and (min-width: 568px) {
+  .home__content{
+    grid-template-columns: max-content 1fr 1fr;
+  }
+  .home__img{
+    order: 1;
+    justify-self: center;
+  }
+  .home__data{
+    grid-column: initial;
+  }
+  .about__container,
+  .skills__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about__data{
+    grid-template-columns: 1fr;
+  }
+  .about__img{
+    width: 250px;
+  }
+  
+}
 
 /* For large devices */
